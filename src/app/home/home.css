@@ -1,0 +1,81 @@
+.how-it-works {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #1e1e1e;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 30px 20px;
+  width: 300px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #1e1e1e;
+}
+
+.card .icon {
+  display: block;
+  font-size: 32px;
+  color: #ff5722;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 15px;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.card.active {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+}
+
+.card.active h3,
+.card.active .icon,
+.card.active p {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}

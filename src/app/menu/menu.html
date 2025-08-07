@@ -1,0 +1,21 @@
+<div class="menu-container">
+  <div class="category-buttons">
+    <button [class.active]="selectedCategory === 'All'" (click)="filterMenu('All')">All</button>
+    <button [class.active]="selectedCategory === 'Specials'" (click)="filterMenu('Specials')">Specials</button>
+    <button [class.active]="selectedCategory === 'Veg'" (click)="filterMenu('Veg')">Veg</button>
+    <button [class.active]="selectedCategory === 'Non-Veg'" (click)="filterMenu('Non-Veg')">Non Veg</button>
+    
+</div>
+
+  <div class="food-grid">
+    <div class="food-card" *ngFor="let item of filteredMenu">
+      <img [src]="item.image" alt="food image" />
+      <div class="details">
+        <p class="type">{{ item.name }}</p>
+        <p class="location">{{ item.location }}</p>
+        <p class="price">{{ item.price }} RS</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+  </div>
+</div>
