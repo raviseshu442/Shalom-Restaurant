@@ -14,6 +14,8 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "outputPath": "dist/shalomrestaurant",
+            "baseHref": "/Shalom-Restaurant/",
             "polyfills": [
               "zone.js"
             ],
